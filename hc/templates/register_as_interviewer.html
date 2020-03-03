@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Interviewee Registration</title>
+</head>
+<body>
+
+<form action="{{ url_for('create_interviewee_profile') }}" , method="post">
+		<label for="iid">Email ID:</label><br>
+  	<input type="text" id="iid" name="iid"><br>
+
+  		<label for="pw">Password:</label><br>
+  	<input type="text" id="pw" name="pw"><br>
+
+	<label for="fname">First name:</label><br>
+  	<input type="text" id="fname" name="fname"><br>
+  	<label for="lname">Last name:</label><br>
+  	<input type="text" id="lname" name="lname"><br>
+
+  	<label for="cur_company">Presently Working in:</label><br>
+  	<input type="text" id="cur_company" name="cur_company"><br>
+
+	<label for="exp">Total year of experience:</label><br>
+  	<input type="number" id="exp" name="exp"><br>
+
+  	
+  	<label for="past_comp">Can take interviews for:</label><br>
+  	<select id="past_comp" name="past_comp" size="4" multiple>
+    	<option value="Amazon">Amazon</option>
+    	<option value="Microsoft">Microsoft</option>
+   		<option value="Adobe">Adobe</option>
+    	<option value="Uber">Uber</option>
+    	<option value="Ola">Ola</option>
+    	<option value="NCR">NCR</option>
+    	<option value="Morgan Stanley">Morgan Stanley</option>
+   </select><br><br>
+
+
+   	<input type="submit" value="submit"><br>
+
+</form>
+
+
+
+</body>
+</html>

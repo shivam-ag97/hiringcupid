@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Arial;
+  color: black;
+}
+
+.split {
+  height: 100%;
+  width: 50%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+.left {
+  left: 0;
+  background-color: white;
+}
+
+.right {
+  right: 0;
+  background-color: white;
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.centered img {
+  width: 150px;
+  border-radius: 50%;
+}
+</style>
+
+</head>
+<body>
+
+
+<div class="split left">
+  <div class="centered">
+  <h1> This is interviewer section</h1>
+  	<div class="container">
+    <div class="row">
+        <div class="col-md-4 col-md-offset-4">
+            <form method=POST action="{{ url_for('login_interviewer') }}">
+                <div class="form-group">
+                    <label for="iid">UserID</label>
+                    <input type="text" class="form-control" name="iid" placeholder="Enter your email id">
+                </div>
+                <div class="form-group">
+                    <label for="pw">Password</label>
+                    <input type="password" class="form-control" name="pw" placeholder="Password">
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Log In</button>
+            </form>
+            <br>
+            <div>
+                Don't have an account? <a href="{{ url_for('register_as_interviewer') }}">Sign up here</a>.
+            </div>
+        </div>
+    </div>
+</div>
+
+  </div>
+</div>
+
+<div class="split right">
+  <div class="centered">
+<h1> This is candidate section</h1>
+	<div class="container">
+    <div class="row">
+        <div class="col-md-4 col-md-offset-4">
+            <form method=POST action="{{ url_for('login_candidate') }}">
+                <div class="form-group">
+                    <label for="cid">Email ID</label>
+                    <input type="text" class="form-control" name="cid" placeholder="Enter your email id">
+                </div>
+                <div class="form-group">
+                    <label for="pw">Password</label>
+                    <input type="password" class="form-control" name="pw" placeholder="Password">
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Log In</button>
+            </form>
+            <br>
+            <div>
+                Don't have an account? <a href="{{ url_for('register_as_candidate') }}">Sign up here</a>.
+            </div>
+        </div>
+    </div>
+</div>
+  </div>
+</div>
+
+
+
+
+
+</body>
+</html>
